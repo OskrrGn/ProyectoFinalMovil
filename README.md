@@ -27,23 +27,81 @@ Brindar una plataforma colaborativa donde cualquier usuario pueda publicar notic
 
 ## 📲 Requisitos del Sistema
 
-- **Sistema operativo:** Android 8.0 (Oreo) o superior  
-- **IDE para desarrollo:** Android Studio (versión compatible con Kotlin)  
-- **Dependencias:** Configuraciones dentro del archivo `build.gradle:app` (especificaciones aún en proceso)
+- Acceso a Internet (para consumir la API).
+- Un servidor PHP (como Hostinger) con base de datos MySQL.
+- Tener cargado `api.php` y la tabla `noticias` en el servidor.
+- Android 8.0 (Oreo) o superior  
+- Android Studio (versión compatible con Kotlin)  
+- Configuraciones dentro del archivo `build.gradle:app` (especificaciones aún en proceso)
 
 ---
 
 ## 🔧 Instalación y Configuración
 
-⚠️ *En desarrollo.*  
-Se está definiendo un proceso estándar de instalación. La idea es realizar pruebas para establecer pasos como:
+### 1. Clonar el repositorio
+git clone https://github.com/tu_usuario/newsapp.git
+cd newsapp
 
-1. Clonar el repositorio.
-2. Abrir el proyecto en Android Studio.
-3. Conectar el entorno con el servidor remoto (API y base de datos).
-4. Ejecutar la app en un emulador o dispositivo real.
+
+## 2. Configurar la base de datos
+
+1. Accede a **phpMyAdmin** en tu hosting (por ejemplo, Hostinger).
+2. Crea una nueva base de datos si no tienes una ya creada.
+3. Importa el archivo `noticias.sql` que se encuentra en este repositorio.
+
+Esto creará la tabla `noticias` con la siguiente estructura:
+
+```sql
+CREATE TABLE noticias (
+  id int(11) NOT NULL,
+  titulo varchar(255) NOT NULL,
+  contenido text NOT NULL,
+  fecha date NOT NULL
+);
+```
+
+> ⚠️ **Nota:** Asegúrate de establecer el motor como `InnoDB` y la codificación como `utf8mb4`.
 
 ---
+
+## 3. Subir la API al servidor
+
+1. Abre el archivo `API.php`.
+2. Edita las siguientes líneas con tus credenciales reales de Hostinger:
+
+```php
+$servername = "localhost";
+$username = "TU_USUARIO";
+$password = "TU_CONTRASEÑA";
+$dbname = "TU_BASE_DE_DATOS";
+```
+
+3. Sube este archivo al servidor en tu hosting (por ejemplo, a la carpeta `public_html` o `/api`).
+4. Verifica que esté accesible, por ejemplo:  
+   `https://tudominio.com/api.php`
+
+---
+
+## 4. Configurar la URL de la API en la app
+
+1. Abre el archivo `RetrofitClient.kt`.
+2. Localiza la configuración de Retrofit y reemplaza la línea:
+
+```kotlin
+.baseUrl("https://tudominio.com/")
+```
+
+> ✅ Asegúrate de que:
+> - La URL termina en `/`.
+> - `api.php` es accesible públicamente.
+
+---
+
+## 5. Ejecutar la app en Android Studio
+
+1. Abre el proyecto en **Android Studio**.
+2. Conecta un dispositivo Android físico **(API 26 o superior)** o usa un emulador.
+3. Haz clic en **Run ▶️** para compilar y ejecutar la aplicación.
 
 ## 🧩 Funcionalidades Principales
 
