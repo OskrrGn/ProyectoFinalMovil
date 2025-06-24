@@ -19,7 +19,7 @@ Brindar una plataforma colaborativa donde cualquier usuario pueda publicar notic
 - **Backend y Base de Datos:**  
   - API en PHP conectada a base de datos MySQL mediante **phpMyAdmin**  
   - Servidor hospedado en **Hostinger**  
-  - Uso de estructuras **JSON** para transmisión de datos  
+  - Uso de pruebas de Script **JSON**   
 - **Sincronización:**  
   - API alojada en Hostinger que permite enviar y recibir datos desde distintos dispositivos
 
