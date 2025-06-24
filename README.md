@@ -41,7 +41,7 @@ Brindar una plataforma colaborativa donde cualquier usuario pueda publicar notic
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/tu_usuario/newsapp.git
+git clone https://github.com/OskrrGn/ProyectoFinalMovil.git
 cd newsapp
 ```
 
@@ -72,10 +72,10 @@ CREATE TABLE noticias (
 2. Edita las siguientes líneas con tus credenciales reales de Hostinger:
 
 ```php
-$servername = "localhost";
-$username = "TU_USUARIO";
-$password = "TU_CONTRASEÑA";
-$dbname = "TU_BASE_DE_DATOS";
+$servername = "localhost";         // En Hostinger casi siempre es localhost para la base de datos
+$username = "u781829000_caballero"; // Tu usuario MySQL, el que mencionas
+$password = "20200Mw1";             // Tu contraseña MySQL
+$dbname = "u781829000_database";   // El nombre de tu base de datos MySQL
 ```
 
 3. Sube este archivo al servidor en tu hosting (por ejemplo, a la carpeta `public_html` o `/api`).
