@@ -39,9 +39,11 @@ Brindar una plataforma colaborativa donde cualquier usuario pueda publicar notic
 ## 🔧 Instalación y Configuración
 
 ### 1. Clonar el repositorio
+
+```bash
 git clone https://github.com/tu_usuario/newsapp.git
 cd newsapp
-
+```
 
 ## 2. Configurar la base de datos
 
