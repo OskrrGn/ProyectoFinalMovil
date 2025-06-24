@@ -78,7 +78,7 @@ $password = "20200Mw1";             // Tu contraseña MySQL
 $dbname = "u781829000_database";   // El nombre de tu base de datos MySQL
 ```
 
-3. Sube este archivo al servidor en tu hosting (por ejemplo, a la carpeta `public_html` o `/api`).
+3. Sube este archivo al servidor en tu hosting a la carpeta `public_html`
 4. Verifica que esté accesible, por ejemplo:  
    `https://tudominio.com/api.php`
 
@@ -117,16 +117,9 @@ $dbname = "u781829000_database";   // El nombre de tu base de datos MySQL
 
 ## 🗄️ Gestión de Datos
 
-- La base de datos se gestiona desde **phpMyAdmin**, alojada en **Hostinger**
+- La base de datos se gestiona desde **phpMyAdmin**, alojada en **Hostinger** (es el backend de la aplicacion)
 - Las operaciones CRUD (crear, leer, actualizar, eliminar) se manejan a través de peticiones HTTP a una **API en PHP**
 - Los datos se transmiten en formato **JSON** entre el frontend (app móvil) y el backend (servidor)
-
----
-
-## 🔐 Seguridad
-
-🚧 *Aún en proceso de implementación.*  
-Se planea añadir medidas básicas de autenticación y validación en futuras versiones si el proyecto lo requiere.
 
 ---
 
@@ -137,7 +130,7 @@ Se planea añadir medidas básicas de autenticación y validación en futuras ve
 - Edición y eliminación de entradas
 - Validaciones previas a la eliminación de una noticia
 - Scroll continuo para visualizar noticias pasadas
-- Cambio de preferencias visuales (modo oscuro/claro, colores)
+- Cambio de preferencias visuales (colores)
 
 ---
 
